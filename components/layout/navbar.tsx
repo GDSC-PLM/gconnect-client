@@ -14,7 +14,7 @@ import {
 
 export default function Navbar() {
   return (
-    <nav className="w-full flex gap-2 justify-between items-center px-10 py-4 shadow-lg">
+    <nav className="w-full flex gap-2 justify-between items-center px-10 md:px-16 py-4 shadow-lg">
       <Link href="/">
         <div className="flex gap-2 items-center">
           <Image
@@ -28,8 +28,8 @@ export default function Navbar() {
       </Link>
 
       <div className="hidden md:flex md:gap-3 md:items-center">
-        <Link href="/home" className="px-5 py-4">Home</Link>
-        <Button className="bg-indigo-500 px-8 py-4 rounded-md shadow gap-3.5 text-white">Sign Up</Button>
+        <Link href="/home">Home</Link>
+        <Button className="bg-indigo-500 hover:bg-indigo-300 px-8 py-4 rounded-md shadow text-white">Sign Up</Button>
         <Button variant="outline" className="px-5 py-4 rounded-md shadow">Log in</Button>
       </div>
 
@@ -39,12 +39,10 @@ export default function Navbar() {
             <Menu />
           </SheetTrigger>
           <SheetContent>
-            <SheetHeader>
-              <SheetTitle>Are you sure absolutely sure?</SheetTitle>
-              <SheetDescription>
-                This action cannot be undone. This will permanently delete your
-                account and remove your data from our servers.
-              </SheetDescription>
+            <SheetHeader className="px-4 py-4 flex gap-2">
+              <Link href="/home" className="text-center text-sm">Home</Link>
+              <Button className="bg-indigo-500 hover:bg-indigo-300 px-4 py-4 rounded-md shadow text-white">Sign Up</Button>
+              <Button variant="outline" className="px-5 py-4 rounded-md shadow">Log in</Button>
             </SheetHeader>
           </SheetContent>
         </Sheet>
