@@ -27,10 +27,10 @@ export default function Navbar() {
         </div>
       </Link>
 
-      <div className="hidden md:flex md:gap-2 md:items-center">
-        <Link href="/home">Home</Link>
-        <Button variant="outline">Log In</Button>
-        <Button>Sign Up</Button>
+      <div className="hidden md:flex md:gap-3 md:items-center">
+        <Link href="/home" className="px-5 py-4">Home</Link>
+        <Button className="bg-indigo-500 px-8 py-4 rounded-md shadow gap-3.5 text-white">Sign Up</Button>
+        <Button variant="outline" className="px-5 py-4 rounded-md shadow">Log in</Button>
       </div>
 
       <div className="md:hidden">
