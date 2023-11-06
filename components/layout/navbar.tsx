@@ -23,7 +23,7 @@ export default function Navbar() {
             width={50}
             height={50}
           />
-          <h1>GConnect</h1>
+          <h1 className="text-orange-400 font-bold text-lg leading-10">GConnect</h1>
         </div>
       </Link>
 
