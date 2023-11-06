@@ -12,7 +12,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
-export default function Navbar() {
+export default function LandingPageNavbar() {
   return (
     <nav className="w-full flex gap-2 justify-between items-center px-10 md:px-36 py-4 shadow-lg">
       <Link href="/">
