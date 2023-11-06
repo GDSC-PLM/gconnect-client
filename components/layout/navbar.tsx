@@ -14,7 +14,7 @@ import {
 
 export default function Navbar() {
   return (
-    <nav className="w-full flex gap-2 justify-between items-center px-10 md:px-16 py-4 shadow-lg">
+    <nav className="w-full flex gap-2 justify-between items-center px-10 md:px-36 py-4 shadow-lg">
       <Link href="/">
         <div className="flex gap-2 items-center">
           <Image
@@ -23,12 +23,12 @@ export default function Navbar() {
             width={50}
             height={50}
           />
-          <h1 className="text-orange-400 font-bold text-lg leading-10">GConnect</h1>
+          <h1 className="text-orange-400 font-bold text-lg leading-10">G-Connect!</h1>
         </div>
       </Link>
 
       <div className="hidden md:flex md:gap-3 md:items-center">
-        <Link href="/home">Home</Link>
+        <Link href="/home" className="px-5">Home</Link>
         <Button className="bg-indigo-500 hover:bg-indigo-300 px-8 py-4 rounded-md shadow text-white">Sign Up</Button>
         <Button variant="outline" className="px-5 py-4 rounded-md shadow">Log in</Button>
       </div>
