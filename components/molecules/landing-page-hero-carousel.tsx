@@ -31,7 +31,10 @@ export default function LadingPageHeroCarousel() {
 
   return (
     <section className="grid justify-center gap-4">
-      <div className="w-full max-w-[450px] overflow-hidden" ref={emblaRef}>
+      <div
+        className="max-w-full overflow-hidden md:max-w-[450px]"
+        ref={emblaRef}
+      >
         <div className="flex">
           {images.map((img, index) => (
             <Image
@@ -44,17 +47,19 @@ export default function LadingPageHeroCarousel() {
           ))}
         </div>
       </div>
-      <div className="flex justify-center gap-1 bg-indigo-100">
+
+      <div className="flex justify-center gap-1">
         {images.map((img, index) => (
           <Button
             key={index}
             size="icon"
             onClick={() => emblaApi?.scrollTo(index)}
             className={cn(
-              `h-6 w-6 rounded-full bg-white shadow hover:bg-indigo-400/25`,
-              selectedIndex == index && "bg-indigo-400 hover:bg-indigo-400",
+              `h-6 w-6 rounded-full bg-white shadow outline outline-1 outline-zinc-200 hover:bg-indigo-400/25`,
+              selectedIndex == index &&
+                "bg-indigo-400 shadow-indigo-600 hover:bg-indigo-400",
             )}
-          ></Button>
+          />
         ))}
       </div>
     </section>
