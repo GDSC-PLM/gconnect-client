@@ -12,9 +12,9 @@ export default function LandingPageHeroSection() {
           </span>
         </h1>
         <p className="max-w-md sm:text-lg">
-          We're here to help you find someone to study with, whether you're
-          looking for someone to help you with a specific course or just someone
-          to motivate you to stay on track.
+          We&apos;re here to help you find someone to study with, whether
+          you&apos;re looking for someone to help you with a specific course or
+          just someone to motivate you to stay on track.
         </p>
         <Button variant="purple" className="justify-self-start" asChild>
           <Link href="?">Get Started</Link>
