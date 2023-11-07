@@ -1,8 +1,3 @@
-import Image from "next/image";
-import Link from "next/link";
-import { Button } from "../ui/button";
-import { Menu } from "lucide-react";
-
 import {
   Sheet,
   SheetContent,
@@ -10,43 +5,68 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/components/ui/sheet";
+} from '@/components/ui/sheet';
+import { Menu } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
+
+import { Button } from '../ui/button';
+import { Container } from '../ui/container';
 
 export default function LandingPageNavbar() {
   return (
-    <nav className="w-full flex gap-2 justify-between items-center px-10 md:px-36 py-4 shadow-lg">
-      <Link href="/">
-        <div className="flex gap-2 items-center">
-          <Image
-            src="gconnect-logo.svg"
-            alt="GConnect Logo"
-            width={50}
-            height={50}
-          />
-          <h1 className="text-orange-400 font-bold text-lg leading-10">G-Connect!</h1>
+    <nav className='gap-2 py-4 shadow-lg'>
+      <Container className='flex w-full items-center justify-between'>
+        <Link href='/'>
+          <div className='flex items-center gap-2'>
+            <Image
+              src='gconnect-logo.svg'
+              alt='GConnect Logo'
+              width={50}
+              height={50}
+            />
+            <h1 className='text-lg font-bold leading-10 text-orange-400'>
+              G-Connect!
+            </h1>
+          </div>
+        </Link>
+        <div className='hidden md:flex md:items-center md:gap-3'>
+          <Button variant='purple'>Sign Up</Button>
+          <Button variant='outline' className='rounded-md shadow'>
+            Log in
+          </Button>
         </div>
-      </Link>
-
-      <div className="hidden md:flex md:gap-3 md:items-center">
-        <Link href="/home" className="px-5">Home</Link>
-        <Button className="bg-indigo-500 hover:bg-indigo-300 px-8 py-4 rounded-md shadow text-white">Sign Up</Button>
-        <Button variant="outline" className="px-5 py-4 rounded-md shadow">Log in</Button>
-      </div>
-
-      <div className="md:hidden">
-        <Sheet>
-          <SheetTrigger>
-            <Menu />
-          </SheetTrigger>
-          <SheetContent>
-            <SheetHeader className="px-4 py-4 flex gap-2">
-              <Link href="/home" className="text-center text-sm">Home</Link>
-              <Button className="bg-indigo-500 hover:bg-indigo-300 px-4 py-4 rounded-md shadow text-white">Sign Up</Button>
-              <Button variant="outline" className="px-5 py-4 rounded-md shadow">Log in</Button>
-            </SheetHeader>
-          </SheetContent>
-        </Sheet>
-      </div>
+        <div className='md:hidden'>
+          <Sheet>
+            <SheetTrigger>
+              <Menu />
+            </SheetTrigger>
+            <SheetContent className='flex flex-col items-center justify-between gap-10'>
+              <div className='flex flex-col items-center text-center'>
+                <Image
+                  src='gconnect-logo.svg'
+                  alt='GConnect Logo'
+                  className='my-8'
+                  width={100}
+                  height={100}
+                />
+                <SheetTitle>G-Connect Menu</SheetTitle>
+                <SheetDescription className='w-40'>
+                  Find and connect with study buddies.
+                </SheetDescription>
+              </div>
+              <div className='flex w-full items-center gap-2'>
+                <Button className='w-full' variant='purple'>
+                  Sign Up
+                </Button>
+                <Button className='w-full' variant='outline'>
+                  Log in
+                </Button>
+              </div>
+            </SheetContent>
+          </Sheet>
+        </div>
+      </Container>
     </nav>
   );
 }
