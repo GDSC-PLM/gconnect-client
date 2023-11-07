@@ -22,7 +22,7 @@ export default function LandingPageHeroSection() {
       </section>
       <LandingPageHeroCarousel />
 
-      <section className="absolute bottom-0 -z-50 hidden h-[150px] w-full bg-indigo-100 md:block" />
+      <section className="absolute bottom-0 -z-50 hidden h-[100px] w-full bg-indigo-100 md:block" />
     </section>
   );
 }
