@@ -6,8 +6,6 @@ import useEmblaCarousel from 'embla-carousel-react';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
-import { Container } from '../ui/container';
-
 const autoplayOptions = {
   delay: 2000,
   rootNode: (emblaRoot: any) => emblaRoot.parentElement,
@@ -85,7 +83,7 @@ export default function LandingPageEmblaCarousel(props: any) {
                 <div
                   key={index}
                   className={cn(
-                    'md:flex-2 lg:flex-3 mx-6 mb-4 h-fit w-1/2 flex-1 rounded-2xl bg-indigo-100 p-8 shadow-xl transition-all duration-300 ease-in-out',
+                    'md:flex-2 lg:flex-3 mx-6 mb-4 h-fit w-1/2 flex-1 rounded-2xl bg-indigo-50 p-8 shadow-xl transition-all duration-300 ease-in-out',
                     selectedIndex === index &&
                       'bg-indigo-200 transition-all duration-300 ease-in-out',
                   )}
@@ -112,7 +110,7 @@ export default function LandingPageEmblaCarousel(props: any) {
               <div
                 key={index}
                 className={cn(
-                  'md:flex-2 lg:flex-3 mx-6 mb-4 h-fit w-1/2 flex-1 rounded-2xl bg-indigo-100 p-8 shadow-xl transition-all duration-300 ease-in-out',
+                  'md:flex-2 lg:flex-3 mx-6 mb-4 h-fit w-1/2 flex-1 rounded-2xl bg-indigo-50 p-8 shadow-xl transition-all duration-300 ease-in-out',
                   selectedIndex === index && 'bg-indigo-200',
                 )}
               >
