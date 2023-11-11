@@ -76,14 +76,14 @@ export default function LandingPageEmblaCarousel(props: any) {
   return (
     <div className='w-full text-neutral-600'>
       <div className='overflow-x-hidden p-4 md:p-0' ref={emblaRef}>
-        <div className='flex h-fit'>
+        <div className='flex h-fit mb-20'>
           {slidesData.map((slide, index) => {
             if (slide.type === 'Testimonial') {
               return (
                 <div
                   key={index}
                   className={cn(
-                    'md:flex-2 lg:flex-3 mx-6 mb-4 h-fit w-1/2 flex-1 rounded-2xl bg-indigo-50 p-8 shadow-xl transition-all duration-300 ease-in-out',
+                    'md:flex-2 lg:flex-3 mx-6 h-fit w-1/2 flex-1 rounded-2xl bg-indigo-50 p-8 shadow-xl transition-all duration-300 ease-in-out',
                     selectedIndex === index &&
                       'bg-indigo-200 transition-all duration-300 ease-in-out',
                   )}
@@ -110,7 +110,7 @@ export default function LandingPageEmblaCarousel(props: any) {
               <div
                 key={index}
                 className={cn(
-                  'md:flex-2 lg:flex-3 mx-6 mb-4 h-fit w-1/2 flex-1 rounded-2xl bg-indigo-50 p-8 shadow-xl transition-all duration-300 ease-in-out',
+                  'md:flex-2 lg:flex-3 mx-6 h-fit w-1/2 flex-1 rounded-2xl bg-indigo-50 p-8 shadow-xl transition-all duration-300 ease-in-out',
                   selectedIndex === index && 'bg-indigo-200',
                 )}
               >
