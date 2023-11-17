@@ -58,11 +58,11 @@ export default function LandingPageNavbar() {
                 </SheetDescription>
               </div>
               <div className='flex w-full items-center gap-2'>
-                <Button className='w-full' variant='purple'>
-                  Sign Up
+                <Button className='w-full' variant='purple' asChild>
+                  <Link href='/signup'>Sign Up</Link>
                 </Button>
-                <Button className='w-full' variant='outline'>
-                  Log in
+                <Button className='w-full' variant='outline' asChild>
+                  <Link href='/login'>Log In</Link>
                 </Button>
               </div>
             </SheetContent>
