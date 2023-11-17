@@ -75,3 +75,8 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Set auto-filled BG color to white */
+input:-webkit-autofill {
+  -webkit-background-clip: text;
+}
