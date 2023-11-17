@@ -31,7 +31,7 @@ const formSchema = z.object({
   // }),
 });
 
-export default function ProfileForm() {
+export default function Login() {
   const form = useForm({
     resolver: zodResolver(formSchema),
   });
@@ -60,7 +60,7 @@ export default function ProfileForm() {
           className='space-y-8 w-[18.75rem]'
         >
           <div className='text-center'>
-            <h1 className='text-2xl lg:text-4xl font-semibold mb-2'>Sign Up</h1>
+            <h1 className='text-2xl lg:text-4xl font-semibold mb-2'>Log In</h1>
             <p className='text-zinc-400 mb-10'>Use your University Email</p>
           </div>
           <FormField
@@ -90,12 +90,12 @@ export default function ProfileForm() {
             )}
           />
           <Button type='submit' variant='purple' className='w-full'>
-            <Mail className='mr-2 h-4 w-4' /> Sign Up using University Email
+            <Mail className='mr-2 h-4 w-4' /> Log In using University Email
           </Button>
           <p className='text-center'>
             or{' '}
-            <Link href='/login' className='font-semibold'>
-              Log In
+            <Link href='/signup' className='font-semibold'>
+              Sign Up
             </Link>{' '}
             instead.
           </p>
