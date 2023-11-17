@@ -31,9 +31,11 @@ export default function LandingPageNavbar() {
           </div>
         </Link>
         <div className='hidden md:flex md:items-center md:gap-3'>
-          <Button variant='purple'>Sign Up</Button>
-          <Button variant='outline' className='rounded-md shadow'>
-            Log in
+          <Button variant='purple' asChild>
+            <Link href='/signup'>Sign Up</Link>
+          </Button>
+          <Button variant='outline' className='rounded-md shadow' asChild>
+            <Link href='/login'>Log in</Link>
           </Button>
         </div>
         <div className='md:hidden'>

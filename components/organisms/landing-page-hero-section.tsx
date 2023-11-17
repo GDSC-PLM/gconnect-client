@@ -28,7 +28,7 @@ export default function LandingPageHeroSection() {
               className='justify-center md:justify-self-start'
               asChild
             >
-              <Link href='?'>Get Started</Link>
+              <Link href='/get-started'>Get Started</Link>
             </Button>
           </section>
           <LandingPageHeroCarousel />

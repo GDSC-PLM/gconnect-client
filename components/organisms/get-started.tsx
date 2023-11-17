@@ -38,14 +38,17 @@ export default function GetStartedSection() {
         <Button
           variant='purple'
           className='mb-4 w-fit break-all flex flex-wrap justify-center h-fit'
+          asChild
         >
-          <Mail size={18} className='mr-2 hidden md:block' />
-          Sign Up using University Email
+          <div>
+            <Mail size={18} className='mr-2 hidden md:block' />
+            <Link href='/signup'>Sign Up using University Email</Link>
+          </div>
         </Button>
 
         <p className='text-zinc-400'>
           or{' '}
-          <Link className='font-semibold text-zinc-900' href='#'>
+          <Link className='font-semibold text-zinc-900' href='/login'>
             Login
           </Link>{' '}
           instead
