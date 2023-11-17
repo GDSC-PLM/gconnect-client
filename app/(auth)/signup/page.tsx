@@ -21,6 +21,9 @@ const formSchema = z.object({
     username: z.string().min(2, {
         message: "Username must be at least 2 characters.",
     }),
+    email: z.string().email({
+        message: "Invalid email address",
+    }),
     password: z.string().min(8, {
         message: "Password must be at least 8 characters.",
     }),
@@ -38,14 +41,14 @@ export default function ProfileForm() {
 
     return (
         <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-            <h1>Sign Up using your University Email</h1>
+        <h1 className="text-center text-xl lg:text-2xl  mt-20 mb-8 font-semibold">Sign Up using your University Email</h1>
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 w-80">
             <FormField
             control={form.control}
-            name="username"
+            name="email"
             render={({ field }) => (
                 <FormItem>
-                <FormLabel>Username</FormLabel>
+                <FormLabel>Email</FormLabel>
                 <FormControl>
                     <Input placeholder="yourname@university.edu" {...field} />
                 </FormControl>
@@ -66,10 +69,10 @@ export default function ProfileForm() {
                 </FormItem>
             )}
             />
-            <Button type="submit">
+            <Button type="submit" variant='purple' className="w-full">
             <Mail className="mr-2 h-4 w-4" /> Sign up using University Email
             </Button>
-            <p>or <a href="">Login</a> instead.</p>
+            <p className="text-center">or <a href="" className="font-semibold">Login</a> instead.</p>
         </form>
         </Form>
     )
